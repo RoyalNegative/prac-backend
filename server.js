@@ -1,6 +1,11 @@
+import OpenAI from 'openai';
+
+
 const express = require('express');
+const cors = require('cors'); 
 const app = express();
-const PORT = process.env.PORT || 5000; // Default to 5000 for local development
+
+app.use(cors());
 
 app.get('/', (req, res) => {
   res.send('Hello, Heroku!');
